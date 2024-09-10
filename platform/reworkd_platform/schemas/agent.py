@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field, validator
 from reworkd_platform.web.api.agent.analysis import Analysis
 
 LLM_Model = Literal[
+    "360gpt-pro",
     "gpt-3.5-turbo",
     "gpt-3.5-turbo-16k",
     "gpt-4",
@@ -19,6 +20,7 @@ Loop_Step = Literal[
     "chat",
 ]
 LLM_MODEL_MAX_TOKENS: Dict[LLM_Model, int] = {
+    "360gpt-pro": 7000,
     "gpt-3.5-turbo": 4000,
     "gpt-3.5-turbo-16k": 16000,
     "gpt-4": 8000,

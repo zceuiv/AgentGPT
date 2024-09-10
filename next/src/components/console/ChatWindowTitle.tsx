@@ -1,9 +1,17 @@
 import React from "react";
 
 import type { GPTModelNames } from "../../types";
-import { GPT_35_TURBO_16K, GPT_4 } from "../../types";
+import {GPT360_PRO, GPT_35_TURBO_16K, GPT_4 } from "../../types";
 
 export const ChatWindowTitle = ({ model }: { model: GPTModelNames }) => {
+  if (model === GPT360_PRO) {
+    return (
+      <>
+        Agent<span className="text-amber-500">GPT360-PRO</span>
+      </>
+    );
+  }
+
   if (model === GPT_4) {
     return (
       <>
