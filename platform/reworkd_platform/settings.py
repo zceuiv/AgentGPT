@@ -170,7 +170,7 @@ class Settings(BaseSettings):
         )
 
     class Config:
-        env_file = ".env"
+        env_file = ".env" #此行代码无用，实际上还是加载环境变量处理
         env_prefix = ENV_PREFIX
         env_file_encoding = "utf-8"
 
